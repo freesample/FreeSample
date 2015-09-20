@@ -3,8 +3,8 @@
 
 #include <random>
 
-#include "mcmc/framework.h"
-#include "mcmc/logger.h"
+#include "FreeSample/framework.h"
+#include "FreeSample/logger.h"
 
 namespace mcmc {
 

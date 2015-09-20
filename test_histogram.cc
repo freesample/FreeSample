@@ -1,6 +1,6 @@
 #include <vector>
 #include <iostream>
-#include "mcmc/histogram.h"
+#include "FreeSample/histogram.h"
 
 using namespace std;
 

@@ -4,7 +4,7 @@
 #include <vector>
 #include <memory>
 
-#include "mcmc/logger.h"
+#include "FreeSample/logger.h"
 
 namespace mcmc {
 
@@ -64,8 +64,9 @@ private:
 
 class GibbsSampler : public Sampler {
 public:
+  GibbsSampler() {}
   GibbsSampler(const std::vector<int>& observable_indices,
-               const std::vector<int>& hidden_indices);
+               const std::vector<int>& hidden_indices) {}
   void Next(int iteration, const Sample &here, Sample *there) const override;
 
 private:

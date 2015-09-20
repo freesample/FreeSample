@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "mcmc/logger.h"
-#include "mcmc/framework.h"
+#include "FreeSample/logger.h"
+#include "FreeSample/framework.h"
 
 namespace mcmc {
 

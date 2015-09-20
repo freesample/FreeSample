@@ -3,7 +3,7 @@
 #include <iostream>
 #include <algorithm>
 
-#include "mcmc/framework.h"
+#include "FreeSample/framework.h"
 
 namespace mcmc {
 
@@ -41,7 +41,7 @@ void GibbsSampler::Next(int iteration, const Sample &here, Sample *there) const 
   do {
     var_idx = rand() % here.GetNumDims();
   } while (evidence_indices_[var_idx]);
-  cpds_[var_idx].Draw(here, there);
+  cpds_[var_idx]->Draw(here, there);
 }
 
 void ConditionalDistribution::Draw(const Sample &here, Sample *sample) {

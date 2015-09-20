@@ -1,8 +1,8 @@
 #include <vector>
 #include <iostream>
 
-#include "mcmc/mcmc.h"
-#include "mcmc/histogram.h"
+#include "FreeSample/mcmc.h"
+#include "FreeSample/histogram.h"
 
 using namespace std;
 
@@ -45,7 +45,7 @@ void TestMetropolis() {
   std::unique_ptr<mcmc::GaussianDistribution> proposal(new mcmc::GaussianDistribution(16.0));
   std::unique_ptr<mcmc::GaussianDensity> target(new mcmc::GaussianDensity(50.0, 9.0));
 
-  mcmc::MetroSampler sampler(proposal, target);
+  mcmc::MetroSampler sampler(proposal.release(), target.release());
   sampler.LogInit("/tmp/metro_sampler_log.txt");
 
   const double histo_start = 40.0;
@@ -62,8 +62,7 @@ void TestMetropolis() {
 
 void TestGibbs() {
   const int num_dims = 5;
-  mcmc::GibbsSampler sampler();
-  sampler.LogInit("/tmp/metro_sampler_log.txt");
+  mcmc::GibbsSampler sampler;
 
   const double histo_start = 40.0;
   const double histo_end = 60.0;

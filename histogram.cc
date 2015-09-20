@@ -1,7 +1,7 @@
 #include <sstream>
 #include <iostream>
 
-#include "mcmc/histogram.h"
+#include "FreeSample/histogram.h"
 
 namespace mcmc {
 

@@ -3,7 +3,7 @@
 #include <random>
 #include <memory>
 
-#include "mcmc/impl.h"
+#include "FreeSample/impl.h"
 
 namespace mcmc {
 

@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 
-#include "mcmc/logger.h"
+#include "FreeSample/logger.h"
 
 namespace mcmc {
 
